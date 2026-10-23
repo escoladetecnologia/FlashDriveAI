@@ -1,0 +1,73 @@
+# ==============================================================================
+# .gitignore - Projeto de IA Offline Portátil
+# ==============================================================================
+
+# --- Modelos de IA (Pesos GGUF pesados: ~1GB+ cada) ---
+# NUNCA comitar modelos no GitHub (ultrapassa o limite de 100MB do GitHub).
+# Baixe-os via script setup_usb_ai.sh ou links no README.
+models/*
+!models/.gitkeep
+*.gguf
+*.bin
+*.safetensors
+
+# --- Base de Conhecimento Pessoal (Privacidade / Dados Sensíveis) ---
+# Impede o upload acidental de documentos privados, PDFs, planilhas ou anotações
+knowledge_base/*
+!knowledge_base/.gitkeep
+!knowledge_base/sobre_sistema.txt
+
+# --- Sistema Operacional Live / Imagens ISO (boot_os) ---
+boot_os/*
+!boot_os/.gitkeep
+*.iso
+*.img
+
+# --- Binários e Bibliotecas Compiladas (llama.cpp) ---
+# Devem ser baixados via setup_usb_ai.sh
+bin/*
+!bin/.gitkeep
+*.exe
+*.dll
+*.so
+*.dylib
+
+# --- Logs e Arquivos Temporários de Execução ---
+*.log
+llama_server.log
+llama_server_qwen.log
+*.tmp
+*.temp
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+.pytest_cache/
+env/
+venv/
+.venv/
+
+# --- Arquivos de Sistema Operacional ---
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+System Volume Information/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux
+*~
+.directory
+
+# --- Configurações de IDE / Editores ---
+.vscode/
+.idea/
+*.swp
+*.swo

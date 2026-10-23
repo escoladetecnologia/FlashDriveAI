@@ -1,0 +1,14 @@
+SISTEMA DE IA PORTÁTIL OFFLINE (8 GB USB)
+=========================================
+Este pendrive contém uma instalação autossuficiente de Inteligência Artificial.
+Hardware alvo: Computadores antigos/modestos x86_64 (sem GPU, 2 a 4 GB RAM).
+
+Modelos disponíveis:
+1. Llama-3.2-1B-Instruct (Q4_K_M): Ideal para conversação rápida, síntese e raciocínio direto.
+2. Qwen2.5-1.5B-Instruct (Q4_K_M): Otimizado para lógica, código, bash e execução ReAct.
+
+Diretórios principais:
+- /bin: Binários estáticos do llama.cpp para Linux e Windows.
+- /models: Modelos GGUF quantizados.
+- /agent: Código do Agente ReAct (Python Standard Library puro).
+- /knowledge_base: Pasta para seus documentos de consulta RAG local.
